@@ -68,4 +68,8 @@ end
 
 group :development do
   gem "annotate"
+  gem "i18n_generators"
+  gem "bootstrap", '~> 5.3.0'
+  gem "http_accept_language"
+  gem "sassc-rails"
 end

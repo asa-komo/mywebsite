@@ -1,10 +1,32 @@
-<h2>My Posts</h2>
-<ul>
+<div class="d-flex justify-content-between">
+    <h2>My Posts</h2>
+    <%= button_to t('.add_new'), new_post_path,method: :get,class: 'btn btn-sm btn-primary' %>
+</div>
+<ul class="list-group mt-2">
     <% @posts.each do |post| %>
-        <li><%= link_to post.title,post_path(post) %></li>
+        <li class="list-group-item d-flex justify-content-between">
+            <div>
+                <%= link_to post.title, post_path(post) %><br />
+                <span class='text-secondary'>
+                    <%= l(post.created_at,format: :long) %>
+                </span>
+            </div>
+            <div class= "dropdown">
+                <button class="btn btn-sm btn-link dropdown-toggle p-0" data-bs-toggle="dropdown" >
+                </button>
+                <div class="dropdown-menu">
+                    <%= link_to t('.edit'), edit_post_path(post),class: 'dropdown-item' %>
+                    <%= button_to t('.delete'),post_path(post),method: :delete ,class: 'dropdown-item' %>
+                </div>
+            </div>
+        </li>
     <% end %>
 </ul>
 <h2>
+    <% 
+=begin %>
     <%= link_to 'Add New', "/posts/new" ,class: 'header-menu' %>
     My Posts
+    <%
+=end %>
 </h2>

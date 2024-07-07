@@ -1,9 +1,4 @@
-<h2>Add New Post</h2>
-<%= render 'form' %>
-
-<% 
-=begin %>
-<%= form_with model: @post do |f| %>
+<%= form_with model: @post do |f|%>
 <p>
     <%= f.text_field :title, placeholder: 'enter title' %>
     <% if @post.errors.messages[:title].any? %>
@@ -20,5 +15,3 @@
     <%= f.submit %>
 </p>
 <% end %>
-<%
-=end %>
