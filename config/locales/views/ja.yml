@@ -4,3 +4,10 @@ ja:
             add_new: 新規登録
             delete: 削除
             edit: 編集
+        signin:
+            signin: サインイン
+            signout: サインアウト
+            signup: サインアップ
+        users:
+            form:
+                cancel: キャンセル
