@@ -1,10 +1,10 @@
 <% if session[:user_id] %>
     <%= link_to t('.signout'), posts_path, class: 'btn btn-sm btn-primary' %>
-    <%= link_to t('.signup'), users_path, class: 'btn btn-sm btn-secondary' %>
+    <%= link_to t('.signup'), new_user_path, class: 'btn btn-sm btn-secondary' %>
 <% else %>
     <% if User.all.any? %>
         <%= link_to t('.signin'), posts_path, class: 'btn btn-sm btn-primary' %>
     <% else %>
-        <%= link_to t('.signup'), users_path, class: 'btn btn-sm btn-secondary' %>
+        <%= link_to t('.signup'), new_user_path, class: 'btn btn-sm btn-secondary' %>
     <% end %>
 <% end %>
