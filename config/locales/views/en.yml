@@ -8,6 +8,6 @@ en:
             signin: Sign In
             signout: Sign Out
             signup: Sign Up
-        users:
-            form:
-                cancel: キャンセル
+    users:
+        form:
+            cancel: Cancel

@@ -12,5 +12,6 @@ Rails.application.routes.draw do
     resource :comments
   end
   resources :users
+  resources :sessions
   root 'posts#index'
 end

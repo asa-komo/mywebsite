@@ -8,6 +8,6 @@ ja:
             signin: サインイン
             signout: サインアウト
             signup: サインアップ
-        users:
-            form:
-                cancel: キャンセル
+    users:
+        form:
+            cancel: キャンセル
