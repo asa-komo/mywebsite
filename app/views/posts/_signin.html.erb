@@ -1,7 +1,6 @@
-<% if session[:user_id] %> 
+<% if current_user %> 
     <div class='d-flex justify-content-end mb-2'>
-        <% user = User.find(session[:user_id]) %>
-        <%= user.display_name %>
+        <span class="me-2"><%= current_user.display_name %></span>
         <%= link_to t('.signout'),
         session_path(session[:user_id]),
         data: {"turbo-method": :delete},

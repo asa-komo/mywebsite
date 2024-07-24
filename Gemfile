@@ -72,4 +72,5 @@ group :development do
   gem "bootstrap", '~> 5.3.0'
   gem "http_accept_language"
   gem "sassc-rails"
+  gem "pundit"
 end
