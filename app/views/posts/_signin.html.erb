@@ -11,7 +11,7 @@
     <% if User.all.any? %>
         <%= form_with scope: :signin, url: sessions_path, html: {class: 'd-flex justify-content-end signin-form'} do |f| %>
             <%= f.text_field :signin_name, placeholder: 'signin name', class: 'form-control form-control-sm' %>
-            <%= f.text_field :password, placeholder: 'password', class: 'form-control form-control-sm' %>
+            <%= f.password_field :password, placeholder: 'password', class: 'form-control form-control-sm' %>
             <%= f.submit t('.signin'), class: 'btn btn-sm btn-primary' %>
         <% end %>
     <% else %>
